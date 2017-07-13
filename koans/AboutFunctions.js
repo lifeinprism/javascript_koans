@@ -108,4 +108,4 @@ describe("About Functions", function() {
       + "      " + return a * b;\n\
     }");
   });    
-});
+};
