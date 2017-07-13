@@ -49,9 +49,6 @@ describe("About Applying What We Have Learnt", function() {
 
     var productsICanEat = _(products).reject(noMushrooms).filter(noNuts);
 
-
-    console.log(productsICanEat);
-
     expect(productsICanEat.length).toBe(1);
   });
 
@@ -71,9 +68,9 @@ describe("About Applying What We Have Learnt", function() {
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
-    var sum = FILL_ME_IN;    /* try chaining range() and reduce() */
+    var sum = _.range(1000).filter((x) => {return x % 3 === 0 || x % 5 === 0}).reduce((sum, x) => {return sum + x;}, 0);
 
-    expect(233168).toBe(FILL_ME_IN);
+    expect(233168).toBe(sum);
   });
 
   /*********************************************************************************/
